@@ -1,0 +1,6 @@
+.venv/
+.deps/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+data/credit_score.csv
