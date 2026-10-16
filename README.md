@@ -8,9 +8,9 @@ Trabajo final individual del módulo FDL del Diplomado en Machine Learning de la
 
 ## Datos
 
-El docente del módulo proporcionó el [enlace al CSV utilizado en el trabajo](https://github.com/delveeducation/datasets/blob/main/credit_score.csv). La copia analizada tiene **96.696 registros**, **28 columnas** y **12.087 clientes** con ocho meses por cliente. La etiqueta `credit_score` está codificada como 0, 1 y 2. La fuente consultada no documenta qué significa cada código ni cómo se asignó.
+El docente del módulo proporcionó el [CSV utilizado en el trabajo](data/credit_score.csv), disponible también en la [fuente del curso](https://github.com/delveeducation/datasets/blob/main/credit_score.csv). El archivo tiene **96.696 registros**, **28 columnas** y **12.087 clientes** con ocho meses por cliente. La etiqueta `credit_score` está codificada como 0, 1 y 2. La fuente consultada no documenta qué significa cada código ni cómo se asignó.
 
-Las columnas `name` y `ssn` no se usan como predictores ni se incluyen en este repositorio. El CSV debe obtenerse de la fuente enlazada. El [detalle de los datos](data/README.md) enumera las variables usadas y permite comprobar si se descargó la misma versión.
+El CSV es material de práctica del módulo e incluye columnas `name` y `ssn`. No se usan como predictores. El [detalle de los datos](data/README.md) enumera las variables usadas y el hash del archivo.
 
 ## Método
 
@@ -58,14 +58,14 @@ Con Python 3.12, desde la raíz del repositorio:
 python -m pip install -r requirements.txt
 ```
 
-Descarga el [CSV de la fuente indicada](https://github.com/delveeducation/datasets/blob/main/credit_score.csv) y guárdalo como `data/credit_score.csv`. Después abre el notebook:
+El CSV ya está en `data/credit_score.csv`. Abre el notebook:
 
 ```powershell
 jupyter lab notebooks/analisis_crediticio_paso_a_paso.ipynb
 ```
 
-Ejecuta las celdas en orden. Si guardas el CSV en otra ruta, define `CREDIT_SCORE_CSV` con esa ruta antes de abrir Jupyter. El notebook también puede leer la URL original cuando no encuentra una copia local.
+Ejecuta las celdas en orden. Si guardas el CSV en otra ruta, define `CREDIT_SCORE_CSV` con esa ruta antes de abrir Jupyter. El notebook puede leer la URL original si no encuentra una copia local.
 
 ## Límites
 
-Este es un ejercicio académico. Se desconoce el significado documentado de las tres categorías y si el archivo representa solicitudes reales. Las métricas proceden de una sola partición, no de una validación temporal o externa. No bastan para tomar decisiones de concesión de crédito.
+Este es un ejercicio académico con datos de práctica. Se desconoce el significado documentado de las tres categorías. Las métricas proceden de una sola partición, no de una validación temporal o externa. No bastan para tomar decisiones de concesión de crédito.
